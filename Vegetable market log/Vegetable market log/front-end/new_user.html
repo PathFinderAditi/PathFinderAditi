@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login-css.css"/>
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <script>
+        const passwordInput = document.querySelector("#id_password")
+const eye = document.querySelector("#eye")
+eye.addEventListener("click", function(){
+  this.classList.toggle("far fa-eye-slash")
+  const type = passwordInput.getAttribute("type") === "password" ? "text" : "password"
+  passwordInput.setAttribute("type", type)
+})
+    </script>
+</head>
+<body>
+    <div id="new-user-container">
+        <h1>Registration Page</h1>
+        <form id="Registration-form">
+          <input type="text" id="id_username" name="username" placeholder="Enter Name" required>
+          <input type="text" id="id_email" name="username" placeholder="Enter Email Id" required>
+          <input type="password" name="password" placeholder="Password" id="id_password">
+  <i class="far fa-eye" style="cursor: pointer;" id="eye"></i>
+          <button type="submit">Register</button>
+        </form>
+</body>
+</html>
+<!-- ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc -->
